@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfController;
+use App\Http\Controllers\StudentController;
 
 // Display a list of all profs
 Route::get('/profs', [ProfController::class, 'index'])->name('profs.index');
@@ -20,3 +21,4 @@ Route::put('/profs/{id}', [ProfController::class, 'update'])->name('profs.update
 
 // Delete a specific prof
 Route::delete('/profs/{id}', [ProfController::class, 'destroy'])->name('profs.destroy');
+Route::get('/Students', [StudentController::class ,'index']);
